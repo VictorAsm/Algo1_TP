@@ -1,0 +1,228 @@
+\documentclass[spanish, a4paper]{article}
+\setlength{\parindent}{0em}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\newcommand{\tupla}[2]{#1 \times #2}
+\input{Algo1Macros}
+
+\setlength{\parskip}{0.1em}
+\usepackage{caratula} % Version modificada para usar las macros de algo1 de ~> https://github.com/bcardiff/dc-tex
+
+
+
+\begin{document}
+\newcommand{\toroide}{\textit{toroide}}
+\newcommand{\bin}{\ensuremath{\ent \times \ent}}
+
+\titulo{TP de Especificación}
+\fecha{\today}
+\materia{Algoritmos y Estructuras de Datos I}
+\grupo{Grupo: 15}
+
+% CAMBIAR INTEGRANTES
+\integrante{Mauricio David Toranzo}{63/20}{david-toranzo-@hotmail.com}
+\integrante{Matias Federico Sarmiento}{741/18}{mfsarmiento@gmail.com}
+\integrante{Victor Manuel Asmad Murga}{760/19}{victorasmad2@gmail.com}
+\integrante{Marco Antonio Avila Tapia}{412/20}{marco6267@hotmail.com}
+
+\maketitle
+
+\section{Ejercicios - Primera Parte}
+
+
+
+%ESCRIBIR  SOLUCIONES AQUÍ
+
+\begin{ejercicio}[:]
+\textbf{pred esValido(t: $\toroide$)}
+
+
+\end{ejercicio}
+
+\begin{ejercicio}[:]
+\textbf{pred toroideMuerto(t: $\toroide$)}
+
+\end{ejercicio}
+
+
+\begin{ejercicio}[:]
+\textbf{pred posicionesVivas(t: $\toroide$, vivas : $\TLista{\tupla{\ent}{\ent}}$)}
+
+\end{ejercicio}
+
+\begin{ejercicio}[:]
+\textbf{aux densidadPoblacion(t: $\toroide$) = $\float$}
+
+\end{ejercicio}
+
+\begin{ejercicio}[:]
+\textbf{aux cantVecinosVivos(t: $\toroide$, f: $\ent$, c: $\ent$) = $\ent$}
+
+\end{ejercicio}
+
+
+\begin{ejercicio}[:]
+\textbf{pred evolucionDePosicion(t: $\toroide$, posicion : $\tupla{\ent}{\ent}$)}
+
+\end{ejercicio}
+
+
+\begin{ejercicio}[:]
+\textbf{pred evolucionToroide(t1: $\toroide$, t2: $\toroide$)}
+
+\end{ejercicio}
+
+
+
+
+
+
+
+\section{Ejercicios - Segunda Parte}
+
+
+\begin{proc}{evolucionMultiple}{in t: $\toroide$, in k: $\ent$, out result: $\toroide$}{}
+    \pre{esValido(t) \wedge k > 0}
+    \post{|t| = |result| \yLuego |t[0]| = |result[0]| \wedge esKesimaEvolucion(t,k,result)}
+
+\end{proc}
+
+
+\begin{proc}{esPeriodico}{in t: $\toroide$, inout p: $\ent$, out result: $\bool$}{}
+    \pre{esValido(t) \wedge p=P_{0}}
+    \post{P_{0} > 0 \wedge
+        result = \True \Iff (\exists k:\ent)(k > 0 \implica \ (esKesimaEvolucion(t,k,t) \wedge p = k))}
+
+\end{proc}
+
+\begin{proc}{primosLejanos}{in t1: $\toroide$, in t2: $\toroide$, out primos: $\bool$}{}
+    \pre{esValido(t1) \wedge esValido(t2)}
+    \post{primos = \True \Iff (\exists k:\ent)\\
+    (k>0 \implicaLuego ( (esKesimaEvolucion(t1,k,t2)) \vee (esKesimaEvolucion(t2,k,t1)) ))}
+
+\end{proc}
+
+\begin{proc}{seleccionNatural}{in ts: $\TLista{\toroide}$, out res: $\ent$}{}
+    \pre{|ts| > 0 \wedge (\forall i : \ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]))}
+    \post{
+        0 \leq res < |ts| \yLuego (\forall i:\ent)(0 \leq i < |ts| \implicaLuego \\
+        (\exists k,w : \ent)(k>w \wedge k>0 \wedge w>0 \wedge \\
+            muerteEnTicks(ts[res],k) \ muerteEnTicks(ts[i], w)))
+    }
+
+\end{proc}
+
+\begin{proc}{fusionar}{in t1: $\toroide$, in t2: $\toroide$, out res: $\toroide$}{}
+    \pre{esValido(t1) \wedge esValido(t2) \wedge |t1| = |t2| \wedge |t1[0]| = |t2[0]|}
+    \post{|result| = |t1| \yLuego |result[0]| = |t[0]|
+    \\ \implica
+    (contieneToroideVivo(result, t1) \wedge contieneToroideVivo(result, t2))
+}
+
+\end{proc}
+
+\begin{proc}{vistaTrasladada}{in t1: $\toroide$, in t2: $\toroide$, out res: $\bool$}{}
+    \pre{esValido(t1) \wedge esValido(t2) \wedge |t1| = |t2| \wedge |t1[0]| = |t2[0]|}
+    \post{
+        res = \True \Iff esTraslado(t1, t2)
+    }
+
+\end{proc}
+
+\begin{ejercicio}[:] \textbf{proc menorSuperficieViva(in t: $\toroide$, out res: $\ent$)}
+    \\
+    
+    \begin{proc}{menorSuperficieViva}{in t: $\toroide$, out res: $\ent$}{}
+        \pre{...}
+        \post{...}
+    
+    \end{proc}
+    
+    \end{ejercicio}
+
+\begin{ejercicio}[:] \textbf{proc enCrecimiento(in t: $\toroide$, out res: $\bool$)}\\
+
+\begin{proc}{enCrecimiento}{in t: $\toroide$, out res: $\bool$}{}
+    \pre{...}
+    \post{...}
+
+\end{proc}
+
+\end{ejercicio}
+
+
+\section{Funciones y Predicados Auxiliares:}
+
+\pred{posValida}{t: \toroide, pos: $\ent$x$\ent$}{
+    if((0 \leq pos_0 \leq |t|) \wedge (0 \leq pos_1 \leq |t[0]|))
+    then
+        \True
+    else
+        \False
+    fi;
+}
+\vspace{5mm}
+
+\pred{supervivenciaPosicion}{t : \toroide, posicion : \ent x\ent}{\\if (cantVecinosVivos(t, posicion_0, posicion_1) == \ 2 \vee \\ cantVecinosVivos(t, posicion_0, posicion_1) == 3) \ then \ \True \ else \ \False \ fi}
+\vspace{5mm}
+
+\pred{resurreccionPosicion}{t : \toroide, posicion : \ent x\ent}{\\if \ (cantVecinosVivos(t, posicion_0, posicion_1) == 3) \ then \ \True \ else \ \False \ fi}
+\vspace{5mm}
+
+\pred{sinRepetidos}{vivas: $\TLista{$\ent$ x $\ent$}$}{\\
+    (\paraTodo i 0 |vivas| \implicaLuego (\paraTodo j 0 |vivas| \yLuego i \neq j \implica vivas[i] \neq vivas[j]))
+}
+\vspace{5mm}
+
+\pred{sinPosicionesFuera}{t: \toroide, vivas: $\TLista{$\ent$ x $\ent$}$}{\\
+    (\paraTodo i 0 |vivas| \implicaLuego (\existe j 0 |t| \implicaLuego (\existe k 0 |t[j]| \implicaLuego vivas[i]_0 = j \wedge vivas[i]_1 = k)))
+}
+\vspace{20mm}
+
+\pred{esKesimaEvolucion}{t:toroide, k:\ent, result: toroide}{\\
+    (\exists \ ts:seq<toroide>) \\
+        (|ts|=k \ \yLuego \ ts[0] = t \wedge ts[k]=result \
+        \wedge 
+        \ (\forall i : \ent) \\
+            (0 \leq i < |ts|-1 \implicaLuego \ evolucionToroide(ts[i], ts[i+1]))))
+}
+\vspace{5mm}
+
+\pred{muerteEnTicks}{t:toroide, k:\ent}{\\
+    (\exists tm:toroide)(|tm| = |t| \yLuego |tm[0]| = |t[0]| \wedge toroideMuerto(tm)
+    \yLuego esKesimaEvolucion(t,k,tm))
+}
+\vspace{5mm}
+
+\pred{contieneToroideVivo}{result:toroide, t:toroide}{\\
+    (\forall i:\ent)(0\leq i < |t| \yLuego (\forall j:\ent)(0\leq j < |t[i]| \implicaLuego (result[i][j] = \True \wedge t[i][j] = \True)
+    ))
+}
+\vspace{5mm}
+
+\pred{esTraslado}{t1:toroide, t2:toroide}{\\
+    (\exists k:\ent)(0 \leq k < |t1| \yLuego (\exists l:\ent)(0 \leq l < |t1[0]| \\ 
+        \implicaLuego (\forall i:\ent)(0 \leq i < |t1| \yLuego (\forall j:\ent)(0 \leq j < |t1[0]| \\
+        \implicaLuego (t1[(i + k) mod |t1|][(j+l) mod |t1[0]| = t2[(i + k) mod |t1|][(j+l) mod |t1[0]|
+        ) \\
+        )) \\
+    ))\\
+}
+\vspace{5mm}
+
+\aux{cantVivas}{t:toroide}{\ent}{\\
+    (\sum_{i=0}^{|t|-1} (\sum_{j=0}^{|t[0]|-1} \IfThenElse {(t[i \ mod \ |t|] \ [j \ mod \ |t[0]|])}{1}{0}))
+}
+
+
+\section{Decisiones tomadas}
+
+%Aquí deben agregar todo lo que hayan asumido para realizar cada ejercicio. No tienen que hablar sobre la estructura (por ejemplo justificar por qué separaron predicados/auxiliares o explicarlos). Tampoco repetir lo que dice el enunciado, pero SI cualquier asunción extra que realicen (en caso de que hagan alguna).
+
+%Tomar en cuenta que no pueden asumir cualquier cosa, ya que podrían estar simplificando el ejercicio, consulten cualquier decisión que tomen! :)
+
+\end{document}
