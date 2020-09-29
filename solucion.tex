@@ -76,12 +76,6 @@
 
 \end{ejercicio}
 
-
-
-
-
-
-
 \section{Ejercicios - Segunda Parte}
 
 
@@ -132,55 +126,39 @@
     }
 
 \end{proc}
-
-\begin{ejercicio}[:] \textbf{proc menorSuperficieViva(in t: $\toroide$, out res: $\ent$)}
-
+\clearpage
 \begin{proc}{menorSuperficieViva}{in t: $\toroide$, out res: $\ent$}{}
-    \pre{...}
-    \post{...}
-    
+    \pre{esValido(t) \wedge \neg toroideMuerto(t)}
+    \post{\\
+        (\exists ts:\TLista{toroide}) \\
+        (esListaDeTraslados(ts,t) \wedge
+        (\exists tMenor:\toroide) \\
+        (tMenor \in ts \wedge 
+        (\forall tItem \in ts)(tieneSuperficieMasChica(tMenor, t, res) \\
+        )))
+    }
 \end{proc}
-
-\end{ejercicio}
-
-\begin{ejercicio}[:] \textbf{proc enCrecimiento(in t: $\toroide$, out res: $\bool$)}\\
 
 \begin{proc}{enCrecimiento}{in t: $\toroide$, out res: $\bool$}{}
-    \pre{...}
-    \post{...}
+    \pre{esValido(t)}
+    \post{res = \True \Iff (\exists tEvo:toroide) \\
+        (|tEvo| = |t| \wedge |tEvo[0]| = |t[0]| \wedge evolucionToroide(t, tEvo) \\
+            \wedge 
+            (\exists trasladoInicial, trasladoFinal : \toroide) \\
+            (
+                esTraslado(t, trasladoInicial) \wedge \\
+                esTraslado(t, trasladoFinal) \wedge \\
+                \neg (\exists k:\ent)(
+                    tieneSuperficieMasChica(trasladoInicial, trasladoFinal, k)
+                )
+            )
+        )
+    )
+}
 
 \end{proc}
 
-\end{ejercicio}
-
-
 \section{Funciones y Predicados Auxiliares:}
-
-\pred{posValida}{t: \toroide, pos: $\ent$x$\ent$}{
-    if((0 \leq pos_0 \leq |t|) \wedge (0 \leq pos_1 \leq |t[0]|))
-    then
-        \True
-    else
-        \False
-    fi;
-}
-\vspace{5mm}
-
-\pred{supervivenciaPosicion}{t : \toroide, posicion : \ent x\ent}{\\if (cantVecinosVivos(t, posicion_0, posicion_1) == \ 2 \vee \\ cantVecinosVivos(t, posicion_0, posicion_1) == 3) \ then \ \True \ else \ \False \ fi}
-\vspace{5mm}
-
-\pred{resurreccionPosicion}{t : \toroide, posicion : \ent x\ent}{\\if \ (cantVecinosVivos(t, posicion_0, posicion_1) == 3) \ then \ \True \ else \ \False \ fi}
-\vspace{5mm}
-
-\pred{sinRepetidos}{vivas: $\TLista{$\ent$ x $\ent$}$}{\\
-    (\paraTodo i 0 |vivas| \implicaLuego (\paraTodo j 0 |vivas| \yLuego i \neq j \implica vivas[i] \neq vivas[j]))
-}
-\vspace{5mm}
-
-\pred{sinPosicionesFuera}{t: \toroide, vivas: $\TLista{$\ent$ x $\ent$}$}{\\
-    (\paraTodo i 0 |vivas| \implicaLuego (\existe j 0 |t| \implicaLuego (\existe k 0 |t[j]| \implicaLuego vivas[i]_0 = j \wedge vivas[i]_1 = k)))
-}
-\vspace{20mm}
 
 \pred{esKesimaEvolucion}{t:toroide, k:\ent, result: toroide}{\\
     (\exists \ ts:seq<toroide>) \\
@@ -207,15 +185,67 @@
     (\exists k:\ent)(0 \leq k < |t1| \yLuego (\exists l:\ent)(0 \leq l < |t1[0]| \\ 
         \implicaLuego (\forall i:\ent)(0 \leq i < |t1| \yLuego (\forall j:\ent)(0 \leq j < |t1[0]| \\
         \implicaLuego (t1[(i + k) mod |t1|][(j+l) mod |t1[0]| = t2[(i + k) mod |t1|][(j+l) mod |t1[0]|
-        ) \\
-        )) \\
+        )
+        ))
     ))\\
+}
+\vspace{5mm}
+
+\pred{laMenorSuperficie}{ts:\TLista{toroide}, t:toroide, res:\ent}{\\
+    (\exists m1:\matriz{\bool})(
+        (\exists t1 \in ts)(
+            (|m| \leq |t1|) \yLuego (|m[0]| \leq |t1[0]|) \\
+            \wedge cantVivas(m1) = cantVivas(t) \\ \wedge estaContenido(m1, t1) 
+            \wedge (\forall i:\ent)(0\leq ts < |ts|-1 \\
+                \yLuego (\exists m2: \matriz{\bool})(
+                    |m2| \leq |t| \yLuego |m2[0]| \leq |t[0]| \\ \wedge estaContenido(m2, ts[i]) \wedge \\
+                    superficieTotal(m1) \leq superficieTotal(m2) \wedge superficieTotal(m1) = res
+                )
+            )
+        )
+    )
+}
+\vspace{5mm}
+
+\pred{tieneSuperficieMasChica}{tMenor: \toroide, tComparado:\toroide, res:\ent}{\\
+    (\exists matrizMenor, matrizComparada:\matriz{\bool})
+    (   \\
+        estaEnRango(matrizMenor, tMenor) \wedge  \\
+        estaEnRango(matrizComparada, tComparado) \wedge  \\
+        cantVivas(matrizMenor) = cantVivas(tMenor) \wedge  \\
+        cantVivas(matrizComparada) = cantVivas(tComparado) \wedge  \\
+        estaContenido(matrizMenor, tMenor) \wedge  \\
+        estaContenido(matrizComparada, tComparado) \wedge  \\
+        superficieTotal(matrizMenor) = res \wedge  \\
+        superficieTotal(matrizMenor) \leq superficieTotal(matrizComparada) \\
+    )
+}
+\vspace{5mm}
+
+\clearpage
+
+\pred{esListaDeTraslados}{ts:\TLista{toroide}, t:toroide}{\\
+(\forall i:\ent)(0\leq i < |ts| \implicaLuego esValido(t) \wedge |ts[i]| = |t| \wedge |ts[i][0]| = |t[0]| \wedge esTraslado(t, ts[i]))\\
+}
+\vspace{5mm}
+
+\pred{estaEnRango}{m:\matriz{\bool}, t:\toroide}{
+    0 < |m| \leq |t| \wedge 0 < |m[0]| \leq |t[0]|
+}
+\vspace{5mm}
+ 
+\pred{estaContenido}{m:\matriz{\bool}, tAux:toroide}{\\
+    |m| \leq |tAux| \yLuego |m[0]| \leq |tAux[0]| \implica
+    (\forall i:\ent)(0\leq i <|m| \yLuego (\forall j:\ent)(0\leq j < |m[0]| \implicaLuego m[i][j] = tAux[i][j]))
 }
 \vspace{5mm}
 
 \aux{cantVivas}{t:toroide}{\ent}{\\
     (\sum_{i=0}^{|t|-1} (\sum_{j=0}^{|t[0]|-1} \IfThenElse {(t[i \ mod \ |t|] \ [j \ mod \ |t[0]|])}{1}{0}))
 }
+\vspace{5mm}
+
+\aux{superficieTotal}{m:\matriz{\bool}}{\ent}{|m|*|m[0]|}
 
 
 \section{Decisiones tomadas}
