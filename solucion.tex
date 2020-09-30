@@ -105,16 +105,15 @@
     \post{
         0 \leq res < |ts| \yLuego (\forall i:\ent)(0 \leq i < |ts| \implicaLuego \\
         (\exists k,w : \ent)(k>w \wedge k>0 \wedge w>0 \wedge \\
-            muerteEnTicks(ts[res],k) \ muerteEnTicks(ts[i], w)))
+            muerteEnTicks(ts[res],k) \geq muerteEnTicks(ts[i], w)))
     }
 
 \end{proc}
 
 \begin{proc}{fusionar}{in t1: $\toroide$, in t2: $\toroide$, out res: $\toroide$}{}
     \pre{esValido(t1) \wedge esValido(t2) \wedge |t1| = |t2| \wedge |t1[0]| = |t2[0]|}
-    \post{|result| = |t1| \yLuego |result[0]| = |t[0]|
-    \\ \implica
-    (contieneToroideVivo(result, t1) \wedge contieneToroideVivo(result, t2))
+    \post{|result| = |t1| \yLuego |result[0]| = |t1[0]| \implica contieneVivas(t1, t2, result)
+    %(contieneToroideVivo(result, t1) \wedge contieneToroideVivo(result, t2))
 }
 
 \end{proc}
@@ -162,7 +161,7 @@
 
 \pred{esKesimaEvolucion}{t:toroide, k:\ent, result: toroide}{\\
     (\exists \ ts:seq<toroide>) \\
-        (|ts|=k \ \yLuego \ ts[0] = t \wedge ts[k]=result \
+        (|ts|=k \ \yLuego \ ts[0] = t \wedge ts[k - 1]=result \
         \wedge 
         \ (\forall i : \ent) \\
             (0 \leq i < |ts|-1 \implicaLuego \ evolucionToroide(ts[i], ts[i+1]))))
@@ -175,9 +174,8 @@
 }
 \vspace{5mm}
 
-\pred{contieneToroideVivo}{result:toroide, t:toroide}{\\
-    (\forall i:\ent)(0\leq i < |t| \yLuego (\forall j:\ent)(0\leq j < |t[i]| \implicaLuego (result[i][j] = \True \wedge t[i][j] = \True)
-    ))
+\pred{contieneVivas}{t1:toroide, t2:toroide, result:toroide}{\\
+    (\forall i:\ent)(0\leq i < |t1| \yLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (t1[i][j] = \True \wedge t2[i][j] = \True \wedge result[i][j] = \True)))
 }
 \vspace{5mm}
 
@@ -191,21 +189,21 @@
 }
 \vspace{5mm}
 
-\pred{laMenorSuperficie}{ts:\TLista{toroide}, t:toroide, res:\ent}{\\
-    (\exists m1:\matriz{\bool})(
-        (\exists t1 \in ts)(
-            (|m| \leq |t1|) \yLuego (|m[0]| \leq |t1[0]|) \\
-            \wedge cantVivas(m1) = cantVivas(t) \\ \wedge estaContenido(m1, t1) 
-            \wedge (\forall i:\ent)(0\leq ts < |ts|-1 \\
-                \yLuego (\exists m2: \matriz{\bool})(
-                    |m2| \leq |t| \yLuego |m2[0]| \leq |t[0]| \\ \wedge estaContenido(m2, ts[i]) \wedge \\
-                    superficieTotal(m1) \leq superficieTotal(m2) \wedge superficieTotal(m1) = res
-                )
-            )
-        )
-    )
-}
-\vspace{5mm}
+%\pred{laMenorSuperficie}{ts:\TLista{toroide}, t:toroide, res:\ent}{\\
+%    (\exists m1:\matriz{\bool})(
+%        (\exists t1 \in ts)(
+%            (|m| \leq |t1|) \yLuego (|m[0]| \leq |t1[0]|) \\
+%            \wedge cantVivas(m1) = cantVivas(t) \\ \wedge estaContenido(m1, t1) 
+%            \wedge (\forall i:\ent)(0\leq ts < |ts|-1 \\
+%                \yLuego (\exists m2: \matriz{\bool})(
+%                    |m2| \leq |t| \yLuego |m2[0]| \leq |t[0]| \\ \wedge estaContenido(m2, ts[i]) \wedge \\
+%                    superficieTotal(m1) \leq superficieTotal(m2) \wedge superficieTotal(m1) = res
+%                )
+%            )
+%        )
+%    )
+%}
+%\vspace{5mm}
 
 \pred{tieneSuperficieMasChica}{tMenor: \toroide, tComparado:\toroide, res:\ent}{\\
     (\exists matrizMenor, matrizComparada:\matriz{\bool})
