@@ -12,8 +12,6 @@
 \setlength{\parskip}{0.1em}
 \usepackage{caratula} % Version modificada para usar las macros de algo1 de ~> https://github.com/bcardiff/dc-tex
 
-
-
 \begin{document}
 \newcommand{\toroide}{\textit{toroide}}
 \newcommand{\bin}{\ensuremath{\ent \times \ent}}
@@ -33,56 +31,56 @@
 
 \section{Ejercicios - Primera Parte}
 
+\pred{esValido}{t : \toroide}{\\
+(\forall i: \ent)
+(
+    (0 \leq i < |t| \land |t| \geq 3) 
+        \implicaLuego 
+        (|t[i]| \geq 3 \wedge |t[0]| = |t[i]|)
+)\\
+}
+\vspace{5mm}
 
+\pred{toroideMuerto}{t : \toroide}{\\
+(\forall i: \ent )(
+    (\forall j: \ent)(
+        (0 \leq i <|t| \land_L 0 \leq j < |t[i]|) \implicaLuego (t[i][j] = \False)))\\
+        }
+\vspace{5mm}
 
-%ESCRIBIR  SOLUCIONES AQUÍ
+\pred{posicionesVivas}{t : \toroide, vivas: \TLista{\ent x \ent}}{\\
+ |vivas| > 0 \land_L (\forall i: \ent)(
+     (0 \leq i < |vivas| ) \implicaLuego \\ ((0 \leq vivas[i]_0 < |t| \land_L 0 \leq vivas[i]_1 < |t[0]|) \land_L (t[vivas[i]_0][vivas[i]_1] = \True)))\\
+     }
+\vspace{5mm}
 
-\begin{ejercicio}[:]
-\textbf{pred esValido(t: $\toroide$)}
+\aux{densidadPoblacion}{t : \toroide}{\ent}{\\
+    (\sum_{i=0}^{|t|-1} (\sum_{j=0}^{|t[i]|-1} if {(t[i][j] = \True)} \ then \ 1 \ else \ 0 \ fi)) / (|t| * |t[0]|)}
+\vspace{5mm}
 
+\aux{cantVecinosVivos}{t : \toroide, f : \ent, c : \ent}{\ent}{\\
+    (\sum_{i=f-1}^{f+1} (\sum_{j=c-1}^{c+1} if {(i \neq f \land j \neq c \land (t[i mod |t|][j mod |t[0]|]))} \ then \ 1 \ else \ 0 \ fi))}
+\vspace{5mm}
 
-\end{ejercicio}
+\pred{evolucionDePosicion}{t : \toroide, posicion : \ent x\ent}{\\
+    0 \leq posicion_{0} < |t| \wedge 0 \leq posicion_{1} < |t[0]| \wedge 
+    \\
+    \IfThenElse{t[posicion_{0}][posicion_{1}]}{
+        2 \leq cantVecinosVivos(t, posicion_{0},posicion_{1}) \leq 3\\
+        }{cantVecinosVivos(t,posicion_{0}, posicion_{1} = 3)}\\
+}
+\vspace{5mm}
 
-\begin{ejercicio}[:]
-\textbf{pred toroideMuerto(t: $\toroide$)}
-
-\end{ejercicio}
-
-
-\begin{ejercicio}[:]
-\textbf{pred posicionesVivas(t: $\toroide$, vivas : $\TLista{\tupla{\ent}{\ent}}$)}
-
-\end{ejercicio}
-
-\begin{ejercicio}[:]
-\textbf{aux densidadPoblacion(t: $\toroide$) = $\float$}
-
-\end{ejercicio}
-
-\begin{ejercicio}[:]
-\textbf{aux cantVecinosVivos(t: $\toroide$, f: $\ent$, c: $\ent$) = $\ent$}
-
-\end{ejercicio}
-
-
-\begin{ejercicio}[:]
-\textbf{pred evolucionDePosicion(t: $\toroide$, posicion : $\tupla{\ent}{\ent}$)}
-
-\end{ejercicio}
-
-
-\begin{ejercicio}[:]
-\textbf{pred evolucionToroide(t1: $\toroide$, t2: $\toroide$)}
-
-\end{ejercicio}
+\pred{evolucionToroide}{t1 : \toroide, t2 : \toroide}{\\
+|t1| = |t2| \land |t1[0]| = |t2[0]| \land_L \\ (\forall i: \ent)(
+    0 \leq i < |t1| \yLuego (\forall j: \ent)(
+        0 \leq j < |t1[0]| \implicaLuego (evolucionDePosicion(t1, (i,j)) = t2[i][j])))\\}
 
 \section{Ejercicios - Segunda Parte}
-
 
 \begin{proc}{evolucionMultiple}{in t: $\toroide$, in k: $\ent$, out result: $\toroide$}{}
     \pre{esValido(t) \wedge k > 0}
     \post{|t| = |result| \yLuego |t[0]| = |result[0]| \wedge esKesimaEvolucion(t,k,result)}
-
 \end{proc}
 
 
@@ -101,7 +99,7 @@
 \end{proc}
 
 \begin{proc}{seleccionNatural}{in ts: $\TLista{\toroide}$, out res: $\ent$}{}
-    \pre{|ts| > 0 \wedge (\forall i : \ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]))}
+    \pre{|ts| > 0 \wedge (\forall i : \ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]) \wedge (\exists k:\ent)(k > 0 \wedge muerteEnTicks (ts[i], k)) }
     \post{
         0 \leq res < |ts| \yLuego (\forall i:\ent)(0 \leq i < |ts| \implicaLuego \\
         (\exists k,w : \ent)(k>w \wedge k>0 \wedge w>0 \wedge \\
@@ -125,7 +123,7 @@
     }
 
 \end{proc}
-\clearpage
+
 \begin{proc}{menorSuperficieViva}{in t: $\toroide$, out res: $\ent$}{}
     \pre{esValido(t) \wedge \neg toroideMuerto(t)}
     \post{\\
@@ -141,16 +139,8 @@
 \begin{proc}{enCrecimiento}{in t: $\toroide$, out res: $\bool$}{}
     \pre{esValido(t)}
     \post{res = \True \Iff (\exists tEvo:toroide) \\
-        (|tEvo| = |t| \wedge |tEvo[0]| = |t[0]| \wedge evolucionToroide(t, tEvo) \\
-            \wedge 
-            (\exists trasladoInicial, trasladoFinal : \toroide) \\
-            (
-                esTraslado(t, trasladoInicial) \wedge \\
-                esTraslado(t, trasladoFinal) \wedge \\
-                \neg (\exists k:\ent)(
-                    tieneSuperficieMasChica(trasladoInicial, trasladoFinal, k)
-                )
-            )
+        ((|tEvo| = |t| \wedge |tEvo[0]| = |t[0]|) \yLuego evolucionToroide(t, tEvo) \\
+            \wedge evolucionTieneSuperficieMayor(tEvo, t)
         )
     )
 }
@@ -220,8 +210,6 @@
 }
 \vspace{5mm}
 
-\clearpage
-
 \pred{esListaDeTraslados}{ts:\TLista{toroide}, t:toroide}{\\
 (\forall i:\ent)(0\leq i < |ts| \implicaLuego esValido(t) \wedge |ts[i]| = |t| \wedge |ts[i][0]| = |t[0]| \wedge esTraslado(t, ts[i]))\\
 }
@@ -244,12 +232,24 @@
 \vspace{5mm}
 
 \aux{superficieTotal}{m:\matriz{\bool}}{\ent}{|m|*|m[0]|}
+\vspace{5mm}
 
+\pred{evolucionTieneSuperficieMayor}{tEvo:\toroide, t:\toroide}{\\
+    (\exists trasladoTInicial, trasladoEvolucion : \toroide) \\
+    (
+        esTraslado(t, trasladoTInicial) \wedge  \\
+        esTraslado(tEvo, trasladoEvolucion) \wedge \\
+        \neg (\exists k:\ent)(
+            tieneSuperficieMasChica(trasladoTInicial, trasladoEvolucion, k)
+        )
+    )\\
+}
 
 \section{Decisiones tomadas}
 
 %Aquí deben agregar todo lo que hayan asumido para realizar cada ejercicio. No tienen que hablar sobre la estructura (por ejemplo justificar por qué separaron predicados/auxiliares o explicarlos). Tampoco repetir lo que dice el enunciado, pero SI cualquier asunción extra que realicen (en caso de que hagan alguna).
 
 %Tomar en cuenta que no pueden asumir cualquier cosa, ya que podrían estar simplificando el ejercicio, consulten cualquier decisión que tomen! :)
+Usamos la primer fila en nuestras funciones y predicados púes los toroides son matrices (todas sus filas tienen el mismo largo y sus columnas el mismo alto), por lo tanto no cambia si usamos la primer o la i-esima fila. 
 
 \end{document}
