@@ -80,13 +80,13 @@
 
 \begin{proc}{evolucionMultiple}{in t: $\toroide$, in k: $\ent$, out result: $\toroide$}{}
     \pre{esValido(t) \wedge k > 0}
-    \post{|t| = |result| \yLuego |t[0]| = |result[0]| \wedge esKesimaEvolucion(t,k,result)}
+    \post{coincideTamanio(t1, result) \wedge esKesimaEvolucion(t,k,result)}
 \end{proc}
 
 
 \begin{proc}{esPeriodico}{in t: $\toroide$, inout p: $\ent$, out result: $\bool$}{}
-    \pre{esValido(t) \wedge p=P_{0}}
-    \post{P_{0} > 0 \wedge
+    \pre{esValido(t) \wedge p>0}
+    \post{
         result = \True \Iff (\exists k:\ent)(k > 0 \implica \ (esKesimaEvolucion(t,k,t) \wedge p = k))}
 
 \end{proc}
@@ -99,25 +99,23 @@
 \end{proc}
 
 \begin{proc}{seleccionNatural}{in ts: $\TLista{\toroide}$, out res: $\ent$}{}
-    \pre{|ts| > 0 \wedge (\forall i : \ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]) \wedge (\exists k:\ent)(k > 0 \wedge muerteEnTicks (ts[i], k)) }
+    \pre{|ts| > 0 \wedge noHayToroidesInmortales(ts) }
     \post{
-        0 \leq res < |ts| \yLuego (\forall i:\ent)(0 \leq i < |ts| \implicaLuego \\
-        (\exists k,w : \ent)(k>w \wedge k>0 \wedge w>0 \wedge \\
-            muerteEnTicks(ts[res],k) \geq muerteEnTicks(ts[i], w)))
+        0 \leq res < |ts| \yLuego toroideTardaMasEnMorir(ts, res)
     }
 
 \end{proc}
 
 \begin{proc}{fusionar}{in t1: $\toroide$, in t2: $\toroide$, out res: $\toroide$}{}
-    \pre{esValido(t1) \wedge esValido(t2) \wedge |t1| = |t2| \wedge |t1[0]| = |t2[0]|}
-    \post{|result| = |t1| \yLuego |result[0]| = |t1[0]| \implica contieneVivas(t1, t2, result)
+    \pre{esValido(t1) \wedge esValido(t2) \wedge coincideTamanio(t1, t2)}
+    \post{coincideTamanio(t1, res) \wedge coincideTamanio(t2, res) \implica contieneVivas(t1, t2, result)
     %(contieneToroideVivo(result, t1) \wedge contieneToroideVivo(result, t2))
 }
 
 \end{proc}
 
 \begin{proc}{vistaTrasladada}{in t1: $\toroide$, in t2: $\toroide$, out res: $\bool$}{}
-    \pre{esValido(t1) \wedge esValido(t2) \wedge |t1| = |t2| \wedge |t1[0]| = |t2[0]|}
+    \pre{esValido(t1) \wedge esValido(t2) \wedge coincideTamanio(t1,t2)}
     \post{
         res = \True \Iff esTraslado(t1, t2)
     }
@@ -127,19 +125,16 @@
 \begin{proc}{menorSuperficieViva}{in t: $\toroide$, out res: $\ent$}{}
     \pre{esValido(t) \wedge \neg toroideMuerto(t)}
     \post{\\
-        (\exists ts:\TLista{toroide}) \\
-        (esListaDeTraslados(ts,t) \wedge
-        (\exists tMenor:\toroide) \\
+        (\exists ts:\TLista{toroide}) (esListaDeTraslados(ts,t) \wedge (\exists tMenor:\toroide) \\
         (tMenor \in ts \wedge 
-        (\forall tItem \in ts)(tieneSuperficieMasChica(tMenor, t, res) \\
-        )))
+        (\forall tItem \in ts)(tieneSuperficieMasChica(tMenor, t, res))))
     }
 \end{proc}
 
 \begin{proc}{enCrecimiento}{in t: $\toroide$, out res: $\bool$}{}
     \pre{esValido(t)}
     \post{res = \True \Iff (\exists tEvo:toroide) \\
-        ((|tEvo| = |t| \wedge |tEvo[0]| = |t[0]|) \yLuego evolucionToroide(t, tEvo) \\
+        (coincideTamanio(t, tEvo) \wedge evolucionToroide(t, tEvo) \\
             \wedge evolucionTieneSuperficieMayor(tEvo, t)
         )
     )
@@ -157,10 +152,24 @@
             (0 \leq i < |ts|-1 \implicaLuego \ evolucionToroide(ts[i], ts[i+1]))))
 }
 \vspace{5mm}
+\pred{coincideTamanio}{t:toroide, tAux:toroide}{
+    |t| = |tAux| \yLuego |t[0]| = |tAux[0]|
+}
 
 \pred{muerteEnTicks}{t:toroide, k:\ent}{\\
     (\exists tm:toroide)(|tm| = |t| \yLuego |tm[0]| = |t[0]| \wedge toroideMuerto(tm)
     \yLuego esKesimaEvolucion(t,k,tm))
+}
+\vspace{5mm}
+
+\pred{noHayToroidesInmortales}{ts: \TLista{\toroide}}{
+    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]) \wedge (\exists k:\ent)(k > 0 \wedge muerteEnTicks (ts[i], k))
+}
+
+\pred{toroideTardaMasEnMorir}{ts: $\TLista{\toroide}$, res: $\ent$}{
+    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego \\
+        (\exists k,w : \ent)(k > w \wedge k>0 \wedge w>0 \wedge \\
+            muerteEnTicks(ts[res],k) \wedge muerteEnTicks(ts[i], w)))
 }
 \vspace{5mm}
 
