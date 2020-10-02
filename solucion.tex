@@ -1,20 +1,17 @@
-\documentclass[spanish, a4paper]{article}
-\setlength{\parindent}{0em}
+\documentclass[a4paper]{article}
+\input{Algo1Macros}
+
 \usepackage{a4wide}
 \usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
 \usepackage[spanish,activeacute]{babel}
 \usepackage{enumerate}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\newcommand{\tupla}[2]{#1 \times #2}
-\input{Algo1Macros}
 
 \setlength{\parskip}{0.1em}
 \usepackage{caratula} % Version modificada para usar las macros de algo1 de ~> https://github.com/bcardiff/dc-tex
 
+\newcommand{\toroide}{Toroide}
+
 \begin{document}
-\newcommand{\toroide}{\textit{toroide}}
-\newcommand{\bin}{\ensuremath{\ent \times \ent}}
 
 \titulo{TP de Especificación}
 \fecha{\today}
@@ -49,7 +46,8 @@
 \vspace{5mm}
 
 \pred{posicionesVivas}{t : \toroide, vivas: \TLista{\ent x \ent}}{\\
- |vivas| > 0 \land_L (\forall i: \ent)(
+    \neg toroideMuerto(t) \wedge
+    |vivas| > 0 \land_L (\forall i: \ent)(
      (0 \leq i < |vivas| ) \implicaLuego \\ ((0 \leq vivas[i]_0 < |t| \land_L 0 \leq vivas[i]_1 < |t[0]|) \land_L (t[vivas[i]_0][vivas[i]_1] = \True)))\\
      }
 \vspace{5mm}
@@ -59,7 +57,7 @@
 \vspace{5mm}
 
 \aux{cantVecinosVivos}{t : \toroide, f : \ent, c : \ent}{\ent}{\\
-    (\sum_{i=f-1}^{f+1} (\sum_{j=c-1}^{c+1} if {(i \neq f \land j \neq c \land (t[i mod |t|][j mod |t[0]|]))} \ then \ 1 \ else \ 0 \ fi))}
+    (\sum_{i=f-1}^{f+1} (\sum_{j=c-1}^{c+1} if {(i \neq f \land j \neq c \land (t[i\ mod\ |t|][j\ mod\ |t[0]|] = \True))} \ then \ 1 \ else \ 0 \ fi))}
 \vspace{5mm}
 
 \pred{evolucionDePosicion}{t : \toroide, posicion : \ent x\ent}{\\
@@ -67,7 +65,7 @@
     \\
     \IfThenElse{t[posicion_{0}][posicion_{1}]}{
         2 \leq cantVecinosVivos(t, posicion_{0},posicion_{1}) \leq 3\\
-        }{cantVecinosVivos(t,posicion_{0}, posicion_{1} = 3)}\\
+        }{cantVecinosVivos(t,posicion_{0}, posicion_{1}) = 3}\\
 }
 \vspace{5mm}
 
@@ -87,17 +85,16 @@
 \begin{proc}{esPeriodico}{in t: $\toroide$, inout p: $\ent$, out result: $\bool$}{}
     \pre{esValido(t) \wedge p>0}
     \post{
-        result = \True \Iff (\exists k:\ent)(k > 0 \implica \ (esKesimaEvolucion(t,k,t) \wedge p = k))}
-
+        result = \True \Iff (\exists k:\ent)(k > 0 \implicaLuego \ (esKesimaEvolucion(t,k,t) \wedge p = k))}
 \end{proc}
 
 \begin{proc}{primosLejanos}{in t1: $\toroide$, in t2: $\toroide$, out primos: $\bool$}{}
     \pre{esValido(t1) \wedge esValido(t2)}
     \post{primos = \True \Iff (\exists k:\ent)\\
     (k>0 \implicaLuego ( (esKesimaEvolucion(t1,k,t2)) \vee (esKesimaEvolucion(t2,k,t1)) ))}
-
 \end{proc}
 
+\clearpage
 \begin{proc}{seleccionNatural}{in ts: $\TLista{\toroide}$, out res: $\ent$}{}
     \pre{|ts| > 0 \wedge noHayToroidesInmortales(ts) }
     \post{
@@ -125,9 +122,9 @@
 \begin{proc}{menorSuperficieViva}{in t: $\toroide$, out res: $\ent$}{}
     \pre{esValido(t) \wedge \neg toroideMuerto(t)}
     \post{\\
-        (\exists ts:\TLista{toroide}) (esListaDeTraslados(ts,t) \wedge (\exists tMenor:\toroide) \\
+        (\exists \ ts:\TLista{toroide}) (esListaDeTraslados(ts,t) \wedge (\exists \ tMenor:\toroide) \\
         (tMenor \in ts \wedge 
-        (\forall tItem \in ts)(tieneSuperficieMasChica(tMenor, t, res))))
+        (\forall \ tItem \in ts)(tieneSuperficieMasChica(tMenor, t, res))))
     }
 \end{proc}
 
@@ -144,6 +141,11 @@
 
 \section{Funciones y Predicados Auxiliares:}
 
+\pred{coincideTamanio}{t:toroide, tAux:toroide}{
+    |t| = |tAux| \yLuego |t[0]| = |tAux[0]|
+}
+\vspace{5mm}
+
 \pred{esKesimaEvolucion}{t:toroide, k:\ent, result: toroide}{\\
     (\exists \ ts:seq<toroide>) \\
         (|ts|=k \ \yLuego \ ts[0] = t \wedge ts[k - 1]=result \
@@ -152,39 +154,46 @@
             (0 \leq i < |ts|-1 \implicaLuego \ evolucionToroide(ts[i], ts[i+1]))))
 }
 \vspace{5mm}
-\pred{coincideTamanio}{t:toroide, tAux:toroide}{
-    |t| = |tAux| \yLuego |t[0]| = |tAux[0]|
-}
 
-\pred{muerteEnTicks}{t:toroide, k:\ent}{\\
-    (\exists tm:toroide)(|tm| = |t| \yLuego |tm[0]| = |t[0]| \wedge toroideMuerto(tm)
-    \yLuego esKesimaEvolucion(t,k,tm))
+\pred{noHayToroidesInmortales}{ts: \TLista{\toroide}}{\\
+    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]) \wedge (\exists k:\ent)(k > 0 \wedge muerteEnTicks (ts[i], k))
 }
 \vspace{5mm}
 
-\pred{noHayToroidesInmortales}{ts: \TLista{\toroide}}{
-    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego esValido(ts[i]) \wedge (\exists k:\ent)(k > 0 \wedge muerteEnTicks (ts[i], k))
-}
-
-\pred{toroideTardaMasEnMorir}{ts: $\TLista{\toroide}$, res: $\ent$}{
-    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego \\
-        (\exists k,w : \ent)(k > w \wedge k>0 \wedge w>0 \wedge \\
+\pred{toroideTardaMasEnMorir}{ts: $\TLista{\toroide}$, res: $\ent$}{\\
+    (\exists k:\ent)(k>0 \implicaLuego
+        (\forall i:\ent)(0 \leq i < |ts| \yLuego i \neq res \implica \\
+        (\exists w: \ent)(k > w \wedge w>0 \wedge \\
             muerteEnTicks(ts[res],k) \wedge muerteEnTicks(ts[i], w)))
+    )
+}
+\vspace{5mm}
+
+\pred{muerteEnTicks}{t:toroide, k:\ent}{\\
+    (\exists tm:toroide)(coincideTamanio(tm, t) \wedge toroideMuerto(tm) \wedge esKesimaEvolucion(t,k,tm))
 }
 \vspace{5mm}
 
 \pred{contieneVivas}{t1:toroide, t2:toroide, result:toroide}{\\
-    (\forall i:\ent)(0\leq i < |t1| \yLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (t1[i][j] = \True \wedge t2[i][j] = \True \wedge result[i][j] = \True)))
+    (\forall i:\ent)(0\leq i < |t1| \yLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (result[i][j] = \True \Iff (t1[i][j] = \True \wedge t2[i][j] = \True))))
 }
 \vspace{5mm}
 
+%\pred{esTraslado}{t1:toroide, t2:toroide}{\\
+%    (\exists k:\ent)(0 \leq k < |t1| \yLuego (\exists l:\ent)(0 \leq l < |t1[0]| \\ 
+%        \implicaLuego (\forall i:\ent)(0 \leq i < |t1| \yLuego (\forall j:\ent)(0 \leq j < |t1[0]| \\
+%        \implicaLuego (t1[(i + k) mod |t1|][(j+l) mod |t1[0]| = t2[(i + k) mod |t1|][(j+l) mod |t1[0]|
+%        )
+%        ))
+%    ))\\
+%}
 \pred{esTraslado}{t1:toroide, t2:toroide}{\\
-    (\exists k:\ent)(0 \leq k < |t1| \yLuego (\exists l:\ent)(0 \leq l < |t1[0]| \\ 
-        \implicaLuego (\forall i:\ent)(0 \leq i < |t1| \yLuego (\forall j:\ent)(0 \leq j < |t1[0]| \\
-        \implicaLuego (t1[(i + k) mod |t1|][(j+l) mod |t1[0]| = t2[(i + k) mod |t1|][(j+l) mod |t1[0]|
+    (\exists x,y :\ent)(0\leq x < |t1| \yLuego 0 \leq y < |t1[0]| \implicaLuego \\
+        (\forall i,k :\ent)(0 \leq i,k < |t1| \yLuego 
+            (\forall j,l: \ent)(0 \leq j,l < |t1[0]| \implicaLuego t2[i][j] = t1[(i+x) mod |t|][(l+y) mod |t[0]|]
+            )
         )
-        ))
-    ))\\
+    )
 }
 \vspace{5mm}
 
@@ -220,7 +229,8 @@
 \vspace{5mm}
 
 \pred{esListaDeTraslados}{ts:\TLista{toroide}, t:toroide}{\\
-(\forall i:\ent)(0\leq i < |ts| \implicaLuego esValido(t) \wedge |ts[i]| = |t| \wedge |ts[i][0]| = |t[0]| \wedge esTraslado(t, ts[i]))\\
+(|ts| > 0 \yLuego sinRepetidos(ts)) \implica
+(\forall i:\ent)(0\leq i < |ts| \implicaLuego esValido(t) \wedge coincideTamanio(ts[i], t) \wedge esTraslado(t, ts[i]))\\
 }
 \vspace{5mm}
 
@@ -232,6 +242,11 @@
 \pred{estaContenido}{m:\matriz{\bool}, tAux:toroide}{\\
     |m| \leq |tAux| \yLuego |m[0]| \leq |tAux[0]| \implica
     (\forall i:\ent)(0\leq i <|m| \yLuego (\forall j:\ent)(0\leq j < |m[0]| \implicaLuego m[i][j] = tAux[i][j]))
+}
+\vspace{5mm}
+
+\pred{sinRepetidos}{ts:\TLista{\toroide}}{
+    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego (\forall j:\ent)((0 \leq j < |ts| \yLuego i \neq j) \implica ts[i]\neq ts[j]))
 }
 \vspace{5mm}
 

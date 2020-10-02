@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.12)  1 OCT 2020 00:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.12)  1 OCT 2020 22:27
 entering extended mode
 **"d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/solucion.tex"
 ("d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/solucion.tex"
@@ -19,153 +19,43 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/a4wide\a4wide.sty
-Package: a4wide 1994/08/30
- (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/ntgclass\a4.sty
-Package: a4 2020/02/18 v1.2g A4 based page layout
-)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip49
-
-For additional information on amsmath, use the `?' option.
-(C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2000/06/29 v2.01 AMS text
- (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks15
-\ex@=\dimen135
-)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen136
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count176
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count177
-\leftroot@=\count178
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count179
-\DOTSCASE@=\count180
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box45
-\strutbox@=\box46
-\big@size=\dimen137
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count181
-\c@MaxMatrixCols=\count182
-\dotsspace@=\muskip16
-\c@parentequation=\count183
-\dspbrk@lvl=\count184
-\tag@help=\toks16
-\row@=\count185
-\column@=\count186
-\maxfields@=\count187
-\andhelp@=\toks17
-\eqnshift@=\dimen138
-\alignsep@=\dimen139
-\tagshift@=\dimen140
-\tagwidth@=\dimen141
-\totwidth@=\dimen142
-\lineht@=\dimen143
-\@envbody=\toks18
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amscd.sty
-Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
-\athelp@=\toks20
-\minaw@=\dimen144
-\bigaw@=\dimen145
-\minCDarrowwidth=\dimen146
+) (Algo1Macros.tex (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks21
-\thm@bodyfont=\toks22
-\thm@headfont=\toks23
-\thm@notefont=\toks24
-\thm@headpunct=\toks25
-\thm@preskip=\skip52
-\thm@postskip=\skip53
-\thm@headsep=\skip54
-\dth@everypar=\toks26
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
-Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
-\symlasy=\mathgroup6
-LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
-(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2020/07/13 3.47 The Babel package
- (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2020/07/13 3.47 Babel common definitions
-\babel@savecnt=\count188
-\U@D=\dimen147
-\l@babelnohyphens=\language79
- (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-)
-\bbl@dirlevel=\count189
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
-Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
-\es@quottoks=\toks27
-\es@quotdepth=\count190
-Package babel Info: Making " an active character on input line 561.
-Package babel Info: Making . an active character on input line 662.
-Package babel Info: Making < an active character on input line 707.
-Package babel Info: Making > an active character on input line 707.
-Package babel Info: Making ' an active character on input line 725.
-)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks28
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks29
-\inpenc@posthook=\toks30
-) (Algo1Macros.tex (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count191
-\mult@box=\box47
-\multicol@leftmargin=\dimen148
-\c@unbalance=\count192
-\c@collectmore=\count193
-\doublecol@number=\count194
-\multicoltolerance=\count195
-\multicolpretolerance=\count196
-\full@width=\dimen149
-\page@free=\dimen150
-\premulticols=\dimen151
-\postmulticols=\dimen152
-\multicolsep=\skip55
-\multicolbaselineskip=\skip56
-\partial@page=\box48
-\last@line=\box49
-\maxbalancingoverflow=\dimen153
-\mult@rightbox=\box50
-\mult@grightbox=\box51
-\mult@gfirstbox=\box52
-\mult@firstbox=\box53
+\c@tracingmulticols=\count176
+\mult@box=\box45
+\multicol@leftmargin=\dimen135
+\c@unbalance=\count177
+\c@collectmore=\count178
+\doublecol@number=\count179
+\multicoltolerance=\count180
+\multicolpretolerance=\count181
+\full@width=\dimen136
+\page@free=\dimen137
+\premulticols=\dimen138
+\postmulticols=\dimen139
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box46
+\last@line=\box47
+\maxbalancingoverflow=\dimen140
+\mult@rightbox=\box48
+\mult@grightbox=\box49
+\mult@gfirstbox=\box50
+\mult@firstbox=\box51
+\@tempa=\box52
+\@tempa=\box53
 \@tempa=\box54
 \@tempa=\box55
 \@tempa=\box56
@@ -201,22 +91,20 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box86
 \@tempa=\box87
 \@tempa=\box88
-\@tempa=\box89
-\@tempa=\box90
-\c@minrows=\count197
-\c@columnbadness=\count198
-\c@finalcolumnbadness=\count199
-\last@try=\dimen154
-\multicolovershoot=\dimen155
-\multicolundershoot=\dimen156
-\mult@nat@firstbox=\box91
-\colbreak@box=\box92
-\mc@col@check@num=\count266
+\c@minrows=\count182
+\c@columnbadness=\count183
+\c@finalcolumnbadness=\count184
+\last@try=\dimen141
+\multicolovershoot=\dimen142
+\multicolundershoot=\dimen143
+\mult@nat@firstbox=\box89
+\colbreak@box=\box90
+\mc@col@check@num=\count185
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks31
+\KV@toks@=\toks16
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
@@ -228,8 +116,8 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/textpos\textpos.sty
 Package: textpos 2019/04/15 v1.9.1
 
@@ -237,176 +125,206 @@ Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
 (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/ms\everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
-\TP@textbox=\box93
-\TP@holdbox=\box94
-\TPHorizModule=\dimen159
-\TPVertModule=\dimen160
-\TP@margin=\dimen161
-\TP@absmargin=\dimen162
+\TP@textbox=\box91
+\TP@holdbox=\box92
+\TPHorizModule=\dimen146
+\TPVertModule=\dimen147
+\TP@margin=\dimen148
+\TP@absmargin=\dimen149
 
 Grid set 16 x 16 = 37.34424pt x 52.81541pt
-\TPboxrulesize=\dimen163
-\TP@ox=\dimen164
-\TP@oy=\dimen165
-\TP@tbargs=\toks32
-\TP@prevdepth=\dimen166
+\TPboxrulesize=\dimen150
+\TP@ox=\dimen151
+\TP@oy=\dimen152
+\TP@tbargs=\toks17
+\TP@prevdepth=\dimen153
 TextBlockOrigin set to 0pt x 0pt
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/qtree\qtree.sty
 Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
 Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
-\c@treecount=\count267
-\c@branchcount=\count268
-\parentbox=\box95
-\treebox=\box96
-\treeboxone=\box97
-\treeboxtwo=\box98
-\treeboxthree=\box99
-\treeboxfour=\box100
-\treeboxfive=\box101
-\treeboxsix=\box102
-\treeboxseven=\box103
-\treeboxeight=\box104
-\treeboxnine=\box105
-\treeboxten=\box106
-\treeboxeleven=\box107
-\treeboxtwelve=\box108
-\treeboxthirteen=\box109
-\treeboxfourteen=\box110
-\treeboxfifteen=\box111
-\treeboxsixteen=\box112
-\treeboxseventeen=\box113
-\treeboxeighteen=\box114
-\treeboxnineteen=\box115
-\treeboxtwenty=\box116
-\treeoffsetone=\skip57
-\treeoffsettwo=\skip58
-\treeoffsetthree=\skip59
-\treeoffsetfour=\skip60
-\treeoffsetfive=\skip61
-\treeoffsetsix=\skip62
-\treeoffsetseven=\skip63
-\treeoffseteight=\skip64
-\treeoffsetnine=\skip65
-\treeoffsetten=\skip66
-\treeoffseteleven=\skip67
-\treeoffsettwelve=\skip68
-\treeoffsetthirteen=\skip69
-\treeoffsetfourteen=\skip70
-\treeoffsetfifteen=\skip71
-\treeoffsetsixteen=\skip72
-\treeoffsetseventeen=\skip73
-\treeoffseteighteen=\skip74
-\treeoffsetnineteen=\skip75
-\treeoffsettwenty=\skip76
-\treeshiftone=\skip77
-\treeshifttwo=\skip78
-\treeshiftthree=\skip79
-\treeshiftfour=\skip80
-\treeshiftfive=\skip81
-\treeshiftsix=\skip82
-\treeshiftseven=\skip83
-\treeshifteight=\skip84
-\treeshiftnine=\skip85
-\treeshiftten=\skip86
-\treeshifteleven=\skip87
-\treeshifttwelve=\skip88
-\treeshiftthirteen=\skip89
-\treeshiftfourteen=\skip90
-\treeshiftfifteen=\skip91
-\treeshiftsixteen=\skip92
-\treeshiftseventeen=\skip93
-\treeshifteighteen=\skip94
-\treeshiftnineteen=\skip95
-\treeshifttwenty=\skip96
-\treewidthone=\skip97
-\treewidthtwo=\skip98
-\treewidththree=\skip99
-\treewidthfour=\skip100
-\treewidthfive=\skip101
-\treewidthsix=\skip102
-\treewidthseven=\skip103
-\treewidtheight=\skip104
-\treewidthnine=\skip105
-\treewidthten=\skip106
-\treewidtheleven=\skip107
-\treewidthtwelve=\skip108
-\treewidththirteen=\skip109
-\treewidthfourteen=\skip110
-\treewidthfifteen=\skip111
-\treewidthsixteen=\skip112
-\treewidthseventeen=\skip113
-\treewidtheighteen=\skip114
-\treewidthnineteen=\skip115
-\treewidthtwenty=\skip116
-\daughteroffsetone=\skip117
-\daughteroffsettwo=\skip118
-\daughteroffsetthree=\skip119
-\daughteroffsetfour=\skip120
-\branchwidthone=\skip121
-\branchwidthtwo=\skip122
-\branchwidththree=\skip123
-\branchwidthfour=\skip124
-\parentoffset=\skip125
-\treeoffset=\skip126
-\daughteroffset=\skip127
-\branchwidth=\skip128
-\parentwidth=\skip129
-\treewidth=\skip130
-\qta=\toks33
-\qtb=\toks34
-\nbranches=\count269
-\qroofx=\count270
-\qroofy=\count271
-\@qrscratchbox=\box117
+\c@treecount=\count186
+\c@branchcount=\count187
+\parentbox=\box93
+\treebox=\box94
+\treeboxone=\box95
+\treeboxtwo=\box96
+\treeboxthree=\box97
+\treeboxfour=\box98
+\treeboxfive=\box99
+\treeboxsix=\box100
+\treeboxseven=\box101
+\treeboxeight=\box102
+\treeboxnine=\box103
+\treeboxten=\box104
+\treeboxeleven=\box105
+\treeboxtwelve=\box106
+\treeboxthirteen=\box107
+\treeboxfourteen=\box108
+\treeboxfifteen=\box109
+\treeboxsixteen=\box110
+\treeboxseventeen=\box111
+\treeboxeighteen=\box112
+\treeboxnineteen=\box113
+\treeboxtwenty=\box114
+\treeoffsetone=\skip51
+\treeoffsettwo=\skip52
+\treeoffsetthree=\skip53
+\treeoffsetfour=\skip54
+\treeoffsetfive=\skip55
+\treeoffsetsix=\skip56
+\treeoffsetseven=\skip57
+\treeoffseteight=\skip58
+\treeoffsetnine=\skip59
+\treeoffsetten=\skip60
+\treeoffseteleven=\skip61
+\treeoffsettwelve=\skip62
+\treeoffsetthirteen=\skip63
+\treeoffsetfourteen=\skip64
+\treeoffsetfifteen=\skip65
+\treeoffsetsixteen=\skip66
+\treeoffsetseventeen=\skip67
+\treeoffseteighteen=\skip68
+\treeoffsetnineteen=\skip69
+\treeoffsettwenty=\skip70
+\treeshiftone=\skip71
+\treeshifttwo=\skip72
+\treeshiftthree=\skip73
+\treeshiftfour=\skip74
+\treeshiftfive=\skip75
+\treeshiftsix=\skip76
+\treeshiftseven=\skip77
+\treeshifteight=\skip78
+\treeshiftnine=\skip79
+\treeshiftten=\skip80
+\treeshifteleven=\skip81
+\treeshifttwelve=\skip82
+\treeshiftthirteen=\skip83
+\treeshiftfourteen=\skip84
+\treeshiftfifteen=\skip85
+\treeshiftsixteen=\skip86
+\treeshiftseventeen=\skip87
+\treeshifteighteen=\skip88
+\treeshiftnineteen=\skip89
+\treeshifttwenty=\skip90
+\treewidthone=\skip91
+\treewidthtwo=\skip92
+\treewidththree=\skip93
+\treewidthfour=\skip94
+\treewidthfive=\skip95
+\treewidthsix=\skip96
+\treewidthseven=\skip97
+\treewidtheight=\skip98
+\treewidthnine=\skip99
+\treewidthten=\skip100
+\treewidtheleven=\skip101
+\treewidthtwelve=\skip102
+\treewidththirteen=\skip103
+\treewidthfourteen=\skip104
+\treewidthfifteen=\skip105
+\treewidthsixteen=\skip106
+\treewidthseventeen=\skip107
+\treewidtheighteen=\skip108
+\treewidthnineteen=\skip109
+\treewidthtwenty=\skip110
+\daughteroffsetone=\skip111
+\daughteroffsettwo=\skip112
+\daughteroffsetthree=\skip113
+\daughteroffsetfour=\skip114
+\branchwidthone=\skip115
+\branchwidthtwo=\skip116
+\branchwidththree=\skip117
+\branchwidthfour=\skip118
+\parentoffset=\skip119
+\treeoffset=\skip120
+\daughteroffset=\skip121
+\branchwidth=\skip122
+\parentwidth=\skip123
+\treewidth=\skip124
+\qta=\toks18
+\qtb=\toks19
+\nbranches=\count188
+\qroofx=\count189
+\qroofy=\count190
+\@qrscratchbox=\box115
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count272
-\rotFPtop=\skip131
-\rotFPbot=\skip132
-\rot@float@box=\box118
-\rot@mess@toks=\toks35
+\c@r@tfl@t=\count191
+\rotFPtop=\skip125
+\rotFPbot=\skip126
+\rot@float@box=\box116
+\rot@mess@toks=\toks20
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2020/07/13 3.47 The Babel package
+ (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2020/07/13 3.47 Babel common definitions
+\babel@savecnt=\count192
+\U@D=\dimen154
+\l@babelnohyphens=\language79
+ (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count193
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks21
+\es@quotdepth=\count194
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+Package babel Info: Making ' an active character on input line 725.
+)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfpages.sty
 Package: pgfpages 2011/01/05 ver 0.02
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks36
-\pgfutil@tempdima=\dimen167
-\pgfutil@tempdimb=\dimen168
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen155
+\pgfutil@tempdimb=\dimen156
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box119
+\pgfutil@abb=\box117
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 )) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks37
-\pgfkeys@temptoks=\toks38
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks39
+\pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen169
-\pgf@y=\dimen170
-\pgf@xa=\dimen171
-\pgf@ya=\dimen172
-\pgf@xb=\dimen173
-\pgf@yb=\dimen174
-\pgf@xc=\dimen175
-\pgf@yc=\dimen176
-\pgf@xd=\dimen177
-\pgf@yd=\dimen178
+\pgf@x=\dimen157
+\pgf@y=\dimen158
+\pgf@xa=\dimen159
+\pgf@ya=\dimen160
+\pgf@xb=\dimen161
+\pgf@yb=\dimen162
+\pgf@xc=\dimen163
+\pgf@yc=\dimen164
+\pgf@xd=\dimen165
+\pgf@yd=\dimen166
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count273
-\c@pgf@countb=\count274
-\c@pgf@countc=\count275
-\c@pgf@countd=\count276
-\t@pgf@toka=\toks40
-\t@pgf@tokb=\toks41
-\t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count277
+\c@pgf@counta=\count195
+\c@pgf@countb=\count196
+\c@pgf@countc=\count197
+\c@pgf@countd=\count198
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count199
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -417,8 +335,8 @@ File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count278
-\pgfsyssoftpath@bigbuffer@items=\count279
+\pgfsyssoftpath@smallbuffer@items=\count266
+\pgfsyssoftpath@bigbuffer@items=\count267
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
@@ -439,52 +357,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen179
-\pgfmath@count=\count280
-\pgfmath@box=\box120
-\pgfmath@toks=\toks43
-\pgfmath@stack@operand=\toks44
-\pgfmath@stack@operation=\toks45
+\pgfmath@dimen=\dimen167
+\pgfmath@count=\count268
+\pgfmath@box=\box118
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex))) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count281
+\c@pgfmathroundto@lastzeros=\count269
 )) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen180
-\pgf@picmaxx=\dimen181
-\pgf@picminy=\dimen182
-\pgf@picmaxy=\dimen183
-\pgf@pathminx=\dimen184
-\pgf@pathmaxx=\dimen185
-\pgf@pathminy=\dimen186
-\pgf@pathmaxy=\dimen187
-\pgf@xx=\dimen188
-\pgf@xy=\dimen189
-\pgf@yx=\dimen190
-\pgf@yy=\dimen191
-\pgf@zx=\dimen192
-\pgf@zy=\dimen193
+\pgf@picminx=\dimen168
+\pgf@picmaxx=\dimen169
+\pgf@picminy=\dimen170
+\pgf@picmaxy=\dimen171
+\pgf@pathminx=\dimen172
+\pgf@pathmaxx=\dimen173
+\pgf@pathminy=\dimen174
+\pgf@pathmaxy=\dimen175
+\pgf@xx=\dimen176
+\pgf@xy=\dimen177
+\pgf@yx=\dimen178
+\pgf@yy=\dimen179
+\pgf@zx=\dimen180
+\pgf@zy=\dimen181
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen194
-\pgf@path@lasty=\dimen195
+\pgf@path@lastx=\dimen182
+\pgf@path@lasty=\dimen183
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen196
-\pgf@shorten@start@additional=\dimen197
+\pgf@shorten@end@additional=\dimen184
+\pgf@shorten@start@additional=\dimen185
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box121
-\pgf@hbox=\box122
-\pgf@layerbox@main=\box123
-\pgf@picture@serial@count=\count282
+\pgfpic=\box119
+\pgf@hbox=\box120
+\pgf@layerbox@main=\box121
+\pgf@picture@serial@count=\count270
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen198
+\pgflinewidth=\dimen186
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen199
-\pgf@pt@y=\dimen256
-\pgf@pt@temp=\dimen257
+\pgf@pt@x=\dimen187
+\pgf@pt@y=\dimen188
+\pgf@pt@temp=\dimen189
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -493,17 +411,17 @@ File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen258
+\pgfarrowsep=\dimen190
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen259
-\pgf@sys@shading@range@num=\count283
-\pgf@shadingcount=\count284
+\pgf@max=\dimen191
+\pgf@sys@shading@range@num=\count271
+\pgf@shadingcount=\count272
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box124
+\pgfexternal@startupbox=\box122
 )) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -514,37 +432,37 @@ File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count285
-\calc@Bcount=\count286
-\calc@Adimen=\dimen260
-\calc@Bdimen=\dimen261
-\calc@Askip=\skip133
-\calc@Bskip=\skip134
+\calc@Acount=\count273
+\calc@Bcount=\count274
+\calc@Adimen=\dimen192
+\calc@Bdimen=\dimen193
+\calc@Askip=\skip127
+\calc@Bskip=\skip128
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count287
-\calc@Cskip=\skip135
+\calc@Ccount=\count275
+\calc@Cskip=\skip129
 )
-\pgf@logicalpages=\count288
-\pgf@firstshipout=\count289
-\pgf@lastshipout=\count290
-\pgf@currentshipout=\count291
-\pgf@cpn=\count292
-\pgf@shipoutnextto=\count293
-\pgfphysicalheight=\dimen262
-\pgfphysicalwidth=\dimen263
-\pgfpages@shipoutbox=\box125
+\pgf@logicalpages=\count276
+\pgf@firstshipout=\count277
+\pgf@lastshipout=\count278
+\pgf@currentshipout=\count279
+\pgf@cpn=\count280
+\pgf@shipoutnextto=\count281
+\pgfphysicalheight=\dimen194
+\pgfphysicalwidth=\dimen195
+\pgfpages@shipoutbox=\box123
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box126
+\pgfnodeparttextbox=\box124
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen264
-\pgf@nodesepend=\dimen265
+\pgf@nodesepstart=\dimen196
+\pgf@nodesepend=\dimen197
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 )) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfarrows.sty
@@ -565,36 +483,36 @@ Package: pgfautomata 2020/01/08 v3.1.5b (3.1.5b)
 
 Package pgfautomata Warning: This package is obsolete. on input line 17.
 
-\pgf@stateradius=\dimen266
-\pgf@mooreradius=\dimen267
-\pgf@doublethickness=\dimen268
-\pgf@statebackoff=\dimen269
+\pgf@stateradius=\dimen198
+\pgf@mooreradius=\dimen199
+\pgf@doublethickness=\dimen256
+\pgf@statebackoff=\dimen257
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfheaps.sty
 Package: pgfheaps 2020/01/08 v3.1.5b (3.1.5b)
 
 
 Package pgfheaps Warning: This package is obsolete. on input line 16.
 
-\pgf@heapx=\dimen270
-\pgf@heapy=\dimen271
+\pgf@heapx=\dimen258
+\pgf@heapy=\dimen259
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count294
-\lst@gtempboxa=\box127
-\lst@token=\toks46
-\lst@length=\count295
-\lst@currlwidth=\dimen272
-\lst@column=\count296
-\lst@pos=\count297
-\lst@lostspace=\dimen273
-\lst@width=\dimen274
-\lst@newlines=\count298
-\lst@lineno=\count299
-\lst@maxwidth=\dimen275
+\lst@mode=\count282
+\lst@gtempboxa=\box125
+\lst@token=\toks34
+\lst@length=\count283
+\lst@currlwidth=\dimen260
+\lst@column=\count284
+\lst@pos=\count285
+\lst@lostspace=\dimen261
+\lst@width=\dimen262
+\lst@newlines=\count286
+\lst@lineno=\count287
+\lst@maxwidth=\dimen263
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count300
-\lst@skipnumbers=\count301
-\lst@framebox=\box128
+\c@lstnumber=\count288
+\lst@skipnumbers=\count289
+\lst@framebox=\box126
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
@@ -606,37 +524,120 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count302
-\Gm@cntv=\count303
-\c@Gm@tempcnt=\count304
-\Gm@bindingoffset=\dimen276
-\Gm@wd@mp=\dimen277
-\Gm@odd@mp=\dimen278
-\Gm@even@mp=\dimen279
-\Gm@layoutwidth=\dimen280
-\Gm@layoutheight=\dimen281
-\Gm@layouthoffset=\dimen282
-\Gm@layoutvoffset=\dimen283
-\Gm@dimlist=\toks47
+\Gm@cnth=\count290
+\Gm@cntv=\count291
+\c@Gm@tempcnt=\count292
+\Gm@bindingoffset=\dimen264
+\Gm@wd@mp=\dimen265
+\Gm@odd@mp=\dimen266
+\Gm@even@mp=\dimen267
+\Gm@layoutwidth=\dimen268
+\Gm@layoutheight=\dimen269
+\Gm@layouthoffset=\dimen270
+\Gm@layoutvoffset=\dimen271
+\Gm@dimlist=\toks35
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-\c@exercise=\count305
-\c@consigna=\count306
+\c@exercise=\count293
+\c@consigna=\count294
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/a4wide\a4wide.sty
+Package: a4wide 1994/08/30
+ (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/ntgclass\a4.sty
+Package: a4 2020/02/18 v1.2g A4 based page layout
+)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip130
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks36
+\ex@=\dimen272
+)) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen273
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count295
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count296
+\leftroot@=\count297
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count298
+\DOTSCASE@=\count299
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box127
+\strutbox@=\box128
+\big@size=\dimen274
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count300
+\c@MaxMatrixCols=\count301
+\dotsspace@=\muskip16
+\c@parentequation=\count302
+\dspbrk@lvl=\count303
+\tag@help=\toks37
+\row@=\count304
+\column@=\count305
+\maxfields@=\count306
+\andhelp@=\toks38
+\eqnshift@=\dimen275
+\alignsep@=\dimen276
+\tagshift@=\dimen277
+\tagwidth@=\dimen278
+\totwidth@=\dimen279
+\lineht@=\dimen280
+\@envbody=\toks39
+\multlinegap=\skip131
+\multlinetaggap=\skip132
+\mathdisplay@stack=\toks40
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks41
+\minaw@=\dimen281
+\bigaw@=\dimen282
+\minCDarrowwidth=\dimen283
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks42
+\thm@bodyfont=\toks43
+\thm@headfont=\toks44
+\thm@notefont=\toks45
+\thm@headpunct=\toks46
+\thm@preskip=\skip133
+\thm@postskip=\skip134
+\thm@headsep=\skip135
+\dth@everypar=\toks47
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks48
 ) (caratula.sty
 Package: caratula 2013/08/04 v0.5 Para componer caratulas de TPs del DC
 
 Cargando package 'caratula' v0.5 (2013/08/04)
-\intlist=\toks48
-\intlistSinLU=\toks49
+\intlist=\toks49
+\intlistSinLU=\toks50
 \c@integrantesCount=\count307
-\intTabNombre=\toks50
-\intTabLU=\toks51
-\intTabEmail=\toks52
+\intTabNombre=\toks51
+\intTabLU=\toks52
+\intTabEmail=\toks53
 \c@directoresCount=\count308
-\direcTabNombre=\toks53
-\direcTabEmail=\toks54
+\direcTabNombre=\toks54
+\direcTabEmail=\toks55
 \c@coDirectoresCount=\count309
-\codirecTabNombre=\toks55
-\codirecTabEmail=\toks56
+\codirecTabNombre=\toks56
+\codirecTabEmail=\toks57
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count310
@@ -647,22 +648,20 @@ LaTeX Info: Redefining \% on input line 9.
 )
 \openout1 = `solucion.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Info: Redefining \. on input line 15.
-LaTeX Info: Redefining \% on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count311
@@ -670,16 +669,18 @@ LaTeX Info: Redefining \% on input line 15.
 \scratchbox=\box130
 \nofMPsegments=\count312
 \nofMParguments=\count313
-\everyMPshowfont=\toks57
+\everyMPshowfont=\toks58
 \MPscratchCnt=\count314
 \MPscratchDim=\dimen285
 \MPnumerator=\count315
 \makeMPintoPDFobject=\count316
-\everyMPtoPDFconversion=\toks58
+\everyMPtoPDFconversion=\toks59
 ) (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 ) ABD: EveryShipout initializing macros
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
 \c@lstlisting=\count317
 
 *geometry* driver: auto-detecting
@@ -694,11 +695,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 * v-part:(T,H,B)=(28.45274pt, 759.6886pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=540.60239pt
-* \textheight=759.6886pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-80.81725pt
+* \textwidth=424.58624pt
+* \textheight=646.0pt
+* \oddsidemargin=18.06749pt
+* \evensidemargin=18.06749pt
+* \topmargin=0.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -719,32 +720,32 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 <logo_dc.jpg, id=4, 215.6055pt x 83.5923pt>
 File: logo_dc.jpg Graphic file (type jpg)
 <use logo_dc.jpg>
-Package pdftex.def Info: logo_dc.jpg  used on input line 30.
+Package pdftex.def Info: logo_dc.jpg  used on input line 27.
 (pdftex.def)             Requested size: 215.60497pt x 83.59207pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--30
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
 (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 30.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 27.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 <logo_uba.jpg, id=5, 225.4824pt x 231.7458pt>
 File: logo_uba.jpg Graphic file (type jpg)
 <use logo_uba.jpg>
-Package pdftex.def Info: logo_uba.jpg  used on input line 30.
+Package pdftex.def Info: logo_uba.jpg  used on input line 27.
 (pdftex.def)             Requested size: 225.48184pt x 231.74522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--30
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
@@ -752,32 +753,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--30
 
 {C:/Users/vAsmad/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./logo_dc.jpg> <./logo_uba.jpg>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 41.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 41.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 38.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 38.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
-LaTeX Font Info:    Trying to load font information for U+dsrom on input line 41.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+LaTeX Font Info:    Trying to load font information for U+dsrom on input line 38.
  (C:\Users\vAsmad\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [1] [2] [3] ("d:/Collections\Facultad - Sistemas\Algoritmos\Algo1_TP\build\solucion.aux"
+) [1]
+Overfull \hbox (22.8565pt too wide) in paragraph at lines 110--110
+ []\OT1/cmtt/m/n/10 Post \OMS/cmsy/m/n/10 f$\OML/cmm/m/it/10 coincideTamanio\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; res\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 coincideTamanio\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; res\OT1/cmr/m/n/10 ) [][]\OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 contieneVivas\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; t\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; result\OT1/cmr/m/n/10 )$\OMS/cmsy/m/n/10 g 
+ []
+
+[2
+
+]
+Overfull \hbox (11.19205pt too wide) in paragraph at lines 234--234
+\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ts\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ^[] \OML/cmm/m/it/10 sinRepetidos\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ts\OT1/cmr/m/n/10 )) [][]\OMS/cmsy/m/n/10 ! \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 i \OT1/cmr/m/n/10 : \U/dsrom/m/n/10 Z\OT1/cmr/m/n/10 )(0 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 i < \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ts\OMS/cmsy/m/n/10 j [][]![] \OML/cmm/m/it/10 esValido\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OML/cmm/m/it/10 coincideTamanio\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ts\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; t\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^
+ []
+
+[3] ("d:/Collections\Facultad - Sistemas\Algoritmos\Algo1_TP\build\solucion.aux"
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 14370 strings out of 481212
- 257300 string characters out of 2905504
- 519801 words of memory out of 3000000
- 29651 multiletter control sequences out of 15000+200000
- 541322 words of font info for 56 fonts, out of 3000000 for 9000
+ 14362 strings out of 481212
+ 257165 string characters out of 2905504
+ 518756 words of memory out of 3000000
+ 29645 multiletter control sequences out of 15000+200000
+ 540278 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,8n,58p,536b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb>
-Output written on "d:/Collections\Facultad - Sistemas\Algoritmos\Algo1_TP\build\solucion.pdf" (4 pages, 543538 bytes).
+<C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb>
+Output written on "d:/Collections\Facultad - Sistemas\Algoritmos\Algo1_TP\build\solucion.pdf" (4 pages, 534400 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
