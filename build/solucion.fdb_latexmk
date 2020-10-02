@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1601602037 "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/solucion.tex" "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/build/solucion.pdf" "solucion" 1601602038
+["pdflatex"] 1601602231 "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/solucion.tex" "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/build/solucion.pdf" "solucion" 1601604554
   "Algo1Macros.tex" 1599517352 17619 4ba3198d14d311609711d9623772b251 ""
   "C:/Users/vAsmad/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1597240144 10050935 9e802362fa511b8ccec5c24e4d387033 ""
   "C:/Users/vAsmad/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1601177293 81068 299f700eb05b1217173e62b88b513bd0 ""
@@ -148,16 +148,16 @@
   "C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1580644884 31532 04852e45d7c17cb384689d2f83b628d3 ""
   "C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1580644886 4546 3e6071704acf4f66392376b7b66ae02c ""
   "C:/Users/vAsmad/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
-  "build/solucion.aux" 1601602038 638 c160ebb468200fa64662b43386b7634c "pdflatex"
+  "build/solucion.aux" 1601602232 638 c160ebb468200fa64662b43386b7634c "pdflatex"
   "caratula.sty" 1502831690 11654 b7d6c7f15260a7fe039ae1559c1c577c ""
-  "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/build/solucion.aux" 1601602038 638 c160ebb468200fa64662b43386b7634c ""
-  "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/solucion.tex" 1601602036 10719 46000035643a918bec3fe5f2085de949 ""
+  "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/build/solucion.aux" 1601602232 638 c160ebb468200fa64662b43386b7634c ""
+  "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/solucion.tex" 1601604553 10722 a38f2702d9362607f2f9b0b89b1bef3b ""
   "logo_dc.jpg" 1502831690 128041 860ed529f2e122b3922f6ce21e3273f1 ""
   "logo_uba.jpg" 1502831690 229119 10f3a63be47e1e95e44f30008ec3af50 ""
-  "solucion.tex" 1601602036 10719 46000035643a918bec3fe5f2085de949 ""
+  "solucion.tex" 1601604553 10722 a38f2702d9362607f2f9b0b89b1bef3b ""
   (generated)
-  "build/solucion.aux"
+  "build/solucion.pdf"
   "build/solucion.log"
   "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/build/solucion.log"
-  "build/solucion.pdf"
+  "build/solucion.aux"
   "d:/Collections/Facultad - Sistemas/Algoritmos/Algo1_TP/build/solucion.pdf"

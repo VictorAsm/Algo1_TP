@@ -41,7 +41,7 @@
 \pred{toroideMuerto}{t : \toroide}{\\
 (\forall i: \ent )(
     (\forall j: \ent)(
-        (0 \leq i <|t| \land_L 0 \leq j < |t[i]|) \implicaLuego (t[i][j] = \False)))\\
+        (0 \leq i <|t| \land_L 0 \leq j < |t[i]|) \implicaLuego (t[i][j] = \False)))
         }
 \vspace{5mm}
 
@@ -174,6 +174,7 @@
 }
 \vspace{5mm}
 
+\clearpage
 \pred{contieneVivas}{t1:toroide, t2:toroide, result:toroide}{\\
     (\forall i:\ent)(0\leq i < |t1| \yLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (result[i][j] = \True \Iff (t1[i][j] = \True \wedge t2[i][j] = \True))))
 }
@@ -223,14 +224,14 @@
         estaContenido(matrizMenor, tMenor) \wedge  \\
         estaContenido(matrizComparada, tComparado) \wedge  \\
         superficieTotal(matrizMenor) = res \wedge  \\
-        superficieTotal(matrizMenor) \leq superficieTotal(matrizComparada) \\
+        superficieTotal(matrizMenor) \leq superficieTotal(matrizComparada)
     )
 }
 \vspace{5mm}
 
 \pred{esListaDeTraslados}{ts:\TLista{toroide}, t:toroide}{\\
 (|ts| > 0 \yLuego sinRepetidos(ts)) \implica
-(\forall i:\ent)(0\leq i < |ts| \implicaLuego esValido(t) \wedge coincideTamanio(ts[i], t) \wedge esTraslado(t, ts[i]))\\
+(\forall i:\ent)(0\leq i < |ts| \implicaLuego esValido(t) \wedge coincideTamanio(ts[i], t) \wedge esTraslado(t, ts[i]))
 }
 \vspace{5mm}
 
@@ -266,7 +267,7 @@
         \neg (\exists k:\ent)(
             tieneSuperficieMasChica(trasladoTInicial, trasladoEvolucion, k)
         )
-    )\\
+    )
 }
 
 \section{Decisiones tomadas}
