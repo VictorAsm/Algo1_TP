@@ -78,7 +78,7 @@
 
 \begin{proc}{evolucionMultiple}{in t: $\toroide$, in k: $\ent$, out result: $\toroide$}{}
     \pre{esValido(t) \wedge k > 0}
-    \post{coincideTamanio(t1, result) \wedge esKesimaEvolucion(t,k,result)}
+    \post{coincideTamanio(t, result) \wedge esKesimaEvolucion(t,k,result)}
 \end{proc}
 
 \begin{proc}{esPeriodico}{in t: $\toroide$, inout p: $\ent$, out result: $\bool$}{}
@@ -176,14 +176,14 @@
 \vspace{5mm}
 
 \pred{esLaMenorSuperficie}{t:\toroide, res:\ent}{\\
-    (\exists \ s:\TLista{\toroide})(
+    (\exists \ ts:\TLista{\toroide})(
         esListaDeTraslados(ts, t) \wedge \\
         (\exists \ tMenor:\toroide)( 
             tMenor \in ts \wedge \\
             (\exists \ mat:\matriz{\bool})(
                 esValidaYEstaContenida(mat, tMenor) \wedge superficie(mat) = res \wedge \\
                 (\forall tItem \in ts)(
-                    tItem \neg tMenor \implicaLuego noHaySuperficieMasChica(sup, tItem)
+                    tItem \neq tMenor \implicaLuego noHaySuperficieMasChica(res, tItem)
                 )
             )
         )
@@ -192,7 +192,7 @@
 \vspace{5mm}
 
 \pred{noHaySuperficieMasChica}{sup:\ent, t:\toroide}{\\
-    (\exists matriz:\matriz{\bool})( esValidaYEstaContenida(matriz) \wedge sup \leq superficie(matriz))}
+    (\exists matriz:\matriz{\bool})( esValidaYEstaContenida(matriz, t) \wedge sup \leq superficie(matriz))}
 \vspace{5mm}
  
 \pred{esValidaYEstaContenida}{mat:\matriz{\bool}, t:\toroide}{\\
@@ -218,7 +218,7 @@
 }
 \vspace{5mm}
 
-\aux{cantVivas}{t:toroide}{\ent}{(\sum_{i=0}^{|t|-1} (\sum_{j=0}^{|t[0]|-1} \IfThenElse {t[i][j]}{1}{0}))}
+\aux{cantVivas}{m:\matriz{\bool}}{\ent}{(\sum_{i=0}^{|m|-1} (\sum_{j=0}^{|m[0]|-1} \IfThenElse {m[i][j]}{1}{0}))}
 \vspace{5mm}
 
 \aux{superficie}{m:\matriz{\bool}}{\ent}{|m|*|m[0]|}
