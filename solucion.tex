@@ -214,7 +214,7 @@
 \vspace{5mm}
 
 \pred{sinRepetidos}{ts:\TLista{\toroide}}{ \\
-    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego (\forall j:\ent)((0 \leq j < |ts| \yLuego i \neq j) \implicaLuego ts[i]\neq ts[j]))
+    (\forall i:\ent)(0 \leq i < |ts| \implicaLuego (\forall j:\ent)((0 \leq j < |ts| \wedge i \neq j) \implicaLuego ts[i]\neq ts[j]))
 }
 \vspace{5mm}
 
