@@ -48,7 +48,7 @@
 \pred{posicionesVivas}{t : \toroide, vivas: \TLista{\ent x \ent}}{\\
     \neg toroideMuerto(t) \wedge
     |vivas| > 0 \wedge (\forall i: \ent)(
-     (0 \leq i < |vivas| ) \wedge \\ ((0 \leq vivas[i]_0 < |t| \land_L 0 \leq vivas[i]_1 < |t[0]|) \implicaLuego (t[vivas[i]_0][vivas[i]_1] = \True)))\\
+     (0 \leq i < |vivas| ) \implicaLuego \\ ((0 \leq vivas[i]_0 < |t| \land_L 0 \leq vivas[i]_1 < |t[0]|) \implicaLuego (t[vivas[i]_0][vivas[i]_1] = \True)))\\
     }
 \vspace{5mm}
 
@@ -71,7 +71,7 @@
 
 \pred{evolucionToroide}{t1 : \toroide, t2 : \toroide}{\\
 |t1| = |t2| \land |t1[0]| = |t2[0]| \land_L \\ (\forall i: \ent)(
-    0 \leq i < |t1| \yLuego (\forall j: \ent)(
+    0 \leq i < |t1| \implicaLuego (\forall j: \ent)(
         0 \leq j < |t1[0]| \implicaLuego (evolucionDePosicion(t1, (i,j)) = t2[i][j])))\\}
 
 \section{Ejercicios - Segunda Parte}
@@ -126,14 +126,14 @@
     \pre{esValido(t) \wedge \neg toroideMuerto(t)}
     \post{res = \True \Iff (\exists tEvo, tMenor: \toroide)(\\
         coincideTamanio(t, tEvo) \wedge coincideTamanio(t, tMenor) \wedge \\
-        esTraslado(t, tMenor) \wedge estaCreciendo(t, tMenor, tEvo)
+        esTraslado(t, tMenor) \wedge estaCreciendo(tMenor, tEvo)
     )
 }
 \end{proc}
 
 \section{Funciones y Predicados Auxiliares:}
 
-\pred{coincideTamanio}{t:toroide, tAux:toroide}{\\esValido(t) \wedge esValido(tAux) \wedge |t| = |tAux| \yLuego |t[0]| = |tAux[0]|}
+\pred{coincideTamanio}{t:toroide, tAux:toroide}{\\esValido(t) \wedge esValido(tAux) \wedge |t| = |tAux| \wedge |t[0]| = |tAux[0]|}
 \vspace{5mm}
 
 \pred{esKesimaEvolucion}{t:toroide, k:\ent, result: toroide}{\\
@@ -152,7 +152,7 @@
 
 \pred{toroideTardaMasEnMorir}{ts: $\TLista{\toroide}$, res: $\ent$}{\\
     (\exists k:\ent)(k>0 \yLuego
-        (\forall i:\ent)(0 \leq i < |ts| \yLuego i \neq res \implicaLuego \\
+        (\forall i:\ent)(0 \leq i < |ts| \wedge i \neq res \implicaLuego \\
         (\exists w: \ent)(w > 0 \wedge k > w \wedge muerteEnTicks(ts[res],k) \wedge muerteEnTicks(ts[i], w))))}
 \vspace{5mm}
 
@@ -163,7 +163,7 @@
 
 \clearpage
 \pred{contieneVivas}{t1:toroide, t2:toroide, result:toroide}{\\
-    (\forall i:\ent)(0\leq i < |t1| \yLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (result[i][j] = \True \Iff (t1[i][j] = \True \wedge t2[i][j] = \True))))
+    (\forall i:\ent)(0\leq i < |t1| \implicaLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (result[i][j] = \True \Iff (t1[i][j] = \True \wedge t2[i][j] = \True))))
 }
 \vspace{5mm}
 
@@ -208,7 +208,7 @@
 \vspace{5mm}
 
 \pred{esListaDeTraslados}{ts:\TLista{toroide}, t:toroide}{\\
-(|ts| > 0 \yLuego sinRepetidos(ts)) \wedge (\forall i:\ent)(0\leq i < |ts| \implicaLuego \\
+(|ts| > 0 \wedge sinRepetidos(ts)) \wedge (\forall i:\ent)(0\leq i < |ts| \implicaLuego \\
  esValido(t) \wedge coincideTamanio(ts[i], t) \wedge esTraslado(t, ts[i]))
 }
 \vspace{5mm}
