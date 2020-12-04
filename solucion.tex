@@ -39,9 +39,7 @@
 \vspace{5mm}
 
 \pred{toroideMuerto}{t : \toroide}{\\
-(\forall i: \ent )(
-    (\forall j: \ent)(
-        (0 \leq i <|t| \land_L 0 \leq j < |t[i]|) \implicaLuego (t[i][j] = \False)))
+(\forall i: \ent )(0 \leq i <|t| \implicaLuego(\forall j: \ent)((0 \leq j < |t[i]|) \implicaLuego (t[i][j] = \False)))
         }
 \vspace{5mm}
 
@@ -52,7 +50,7 @@
     }
 \vspace{5mm}
 
-\aux{densidadPoblacion}{t : \toroide}{\ent}{\\
+\aux{densidadPoblacion}{t : \toroide}{\float}{\\
     (\sum_{i=0}^{|t|-1} (\sum_{j=0}^{|t[i]|-1} if {(t[i][j] = \True)} \ then \ 1 \ else \ 0 \ fi)) / (|t| * |t[0]|)}
 \vspace{5mm}
 
@@ -70,9 +68,8 @@
 \vspace{5mm}
 
 \pred{evolucionToroide}{t1 : \toroide, t2 : \toroide}{\\
-|t1| = |t2| \land |t1[0]| = |t2[0]| \land_L \\ (\forall i: \ent)(
-    0 \leq i < |t1| \implicaLuego (\forall j: \ent)(
-        0 \leq j < |t1[0]| \implicaLuego (evolucionDePosicion(t1, (i,j)) = t2[i][j])))\\}
+|t1| = |t2| \land |t1[0]| = |t2[0]| \land_L (\forall i: \ent)(0 \leq i < |t1| \implicaLuego \\
+(\forall j: \ent)(0 \leq j < |t1[0]| \implicaLuego (evolucionDePosicion(t1, (i,j)) = t2[i][j])))\\}
 
 \section{Ejercicios - Segunda Parte}
 
@@ -152,7 +149,7 @@
 
 \pred{toroideTardaMasEnMorir}{ts: $\TLista{\toroide}$, res: $\ent$}{\\
     (\exists k:\ent)(k>0 \yLuego
-        (\forall i:\ent)(0 \leq i < |ts| \wedge i \neq res \implicaLuego \\
+        (\forall i:\ent)((0 \leq i < |ts| \wedge i \neq res) \implicaLuego \\
         (\exists w: \ent)(w > 0 \wedge k > w \wedge muerteEnTicks(ts[res],k) \wedge muerteEnTicks(ts[i], w))))}
 \vspace{5mm}
 
@@ -163,15 +160,16 @@
 
 \clearpage
 \pred{contieneVivas}{t1:toroide, t2:toroide, result:toroide}{\\
-    (\forall i:\ent)(0\leq i < |t1| \implicaLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego (result[i][j] = \True \Iff (t1[i][j] = \True \wedge t2[i][j] = \True))))
+    (\forall i:\ent)(0\leq i < |t1| \implicaLuego (\forall j:\ent)(0\leq j < |t1[i]| \implicaLuego \\
+     (result[i][j] = \True \Iff (t1[i][j] = \True \wedge t2[i][j] = \True))))
 }
 \vspace{5mm}
 
 \pred{esTraslado}{t1:toroide, t2:toroide}{\\
     (\exists x,y :\ent)(0\leq x < |t1| \yLuego 0 \leq y < |t1[0]| \wedge
-    (\forall i,k :\ent)(0 \leq i,k < |t1| \yLuego \\
-    (\forall j,l: \ent)(0 \leq j,l < |t1[0]| \implicaLuego
-    t2[i][j] = t1[(k+x) \ mod \ |t|][(l+y) \ mod \ |t[0]|])))
+    (\forall i :\ent)(0 \leq i < |t1| \implicaLuego \\
+    (\forall j: \ent)(0 \leq j < |t1[0]| \implicaLuego
+    t2[i][j] = t1[(i+x) \ mod \ |t|][(j+y) \ mod \ |t[0]|])))
 }
 \vspace{5mm}
 
@@ -200,7 +198,7 @@
     (\exists x,y: \ent)(
         0 \leq x < |t| \yLuego 0 \leq y < |t[0]| \wedge
         (\forall i:\ent)(
-            0 \leq i < |mat| \yLuego \\
+            0 \leq i < |mat| \implicaLuego \\
             (\forall j:\ent)(
                 0 \leq j < |mat[i]| \implicaLuego mat[i][j] = t[(i+x) mod |t|][(j + y) mod |t[0]|]
         )))
@@ -218,7 +216,7 @@
 }
 \vspace{5mm}
 
-\aux{cantVivas}{m:\matriz{\bool}}{\ent}{(\sum_{i=0}^{|m|-1} (\sum_{j=0}^{|m[0]|-1} \IfThenElse {m[i][j]}{1}{0}))}
+\aux{cantVivas}{m:\matriz{\bool}}{\ent}{(\sum_{i=0}^{|m|-1} (\sum_{j=0}^{|m[0]|-1} \IfThenElse {(m[i][j] = \True)}{1}{0}))}
 \vspace{5mm}
 
 \aux{superficie}{m:\matriz{\bool}}{\ent}{|m|*|m[0]|}
@@ -232,7 +230,7 @@
         0 < k \leq superficie(tMenor) \yLuego esLaMenorSuperficie(tMenor, k) \wedge \\
         (evolucionToroide(tMenor, tEvo) \wedge \neg toroideMuerto(tEvo)) \wedge \\
         (\exists j:\ent)(
-                0 < j \leq superficie(tMenor) \wedge j > k \yLuego esLaMenorSuperficie(tEvo, j)
+                0 < j \leq superficie(tEvo) \wedge j > k \yLuego esLaMenorSuperficie(tEvo, j)
         )
     )
 }
